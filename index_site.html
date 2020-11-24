@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/compilados/bootstrap.css">
+    <link rel="stylesheet" href="style/index-style-css/style_index.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.css">
+
+    <title>Geek Cine</title>
+  </head>
+  <body>
+  	<!-- Para deixar o navbar fixo no topo e sem rolar com a pagina: 
+  	   class="navbar navbar-fixed-top navbar-expand-lg navbar-dark bg-primary" | para habilitar gradiente/degradê: class="" -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-gradient-primary"> <!--Before: navbar-light e bg-light -->
+        <!--lg, sm e md são os modos de encolhimento dos items de menu sujeitos às resoluções dos site responsivo -->
+        <div class="container">
+        	<a class="navbar-brand h1 mb-1" href="#"><i class="fa fa-film" aria-hidden="true"></i> Geek Cine</a>
+
+        	<button class="navbar-toggler" data-toggle="collapse" data-target="#navbarSite">
+        		<span class="navbar-toggler-icon"></span>
+        	</button>
+
+        	<div class="collapse navbar-collapse" id="navbarSite">
+        		<ul class="navbar-nav h5 mr-auto">
+        			<li class="nav-item">
+        				<a class="nav-link" href="#">Inicio</a>
+        			</li>
+        			<li class="nav-item">
+        				<a class="nav-link" href="#">Perfil</a>
+        			</li>
+        			<li class="nav-item">
+        				<a class="nav-link" href="#">Serviços</a>
+        			</li>
+        			<li class="nav-item">
+        				<a class="nav-link" href="cadastro.html">Cadastro</a>
+        			</li>
+        			<li class="nav-item">
+        				<a class="nav-link" href="#">Contatos</a>
+        			</li>
+        		</ul>
+
+        		<ul class="navbar-nav ml-auto"><!-- "ml" é margin left -->
+        		    <li class="nav-item dropdown">
+        		    	<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="navDrop">Redes Sociais</a>
+
+        		    	<div class="dropdown-menu">
+        		    		<a class="dropdown-item">Facebook</a>
+        		    		<a class="dropdown-item">Twitter</a>
+        		    		<a class="dropdown-item">Instagram</a>
+        		    	</div>
+        		    </li>
+        		</ul>
+        	
+                <form class="form-inline">
+                	<input class="form-control ml-4 mr-2" type="search" placeholder="Buscar...">
+                	<button class="btn btn-dark" type="submit">Ok</button><!-- criando o botão de busca -->
+                </form>
+        	</div>
+        </div>
+    </nav>
+
+   
+
+    <!-- UTILIZANDO O COMPONENTE CAROUSEL NO SITE. Ele pode ser usado na 
+    forma de caption, slide, controlador e indicador  -->
+    
+   <div class="container-person">
+    <div id="carouselSite" class="carousel slide" data-ride="carousel">
+
+        <!-- Trecho de inclusão dos indicadores dos slides da tela inicial -->
+        <ol class="carousel-indicators">
+        	<li data-target="#carouselSite" data-slide-to="0"></li> <!-- primeiro slide -->
+        	<li data-target="#carouselSite" data-slide-to="1" class="active"></li> <!-- segundo slide, como é ele que será exibido primeiro é atribuído à ele a classe "active" -->
+        	<li data-target="#carouselSite" data-slide-to="2"></li> <!-- terceiro slide -->
+        </ol> 
+        <!-- Terminando a inclusão dos indicadores ----------------------------------------------------------------->         
+
+
+        <!-- inserindo as imagens dos slides a partir daqui: -->
+    	<div class="carousel-inner">
+    		<div class="carousel-item">
+    			<img src="images/poltronas index.jpg" class="d-block"> <!-- 
+    			"image-responsive" mudou de nome no BootStrap 4 e passou à 
+    			ser chamado de "img-fluid"  | a classe "d-block" que significa "display: block" vai fazer com que a imagem apareça em todas as resoluções de tela   / -->
+
+                <!-- Inserindo um cation/texto dentro do carousel: -->
+    			<div class="carousel-caption d-none d-sm-block text-white">
+    		    <!-- Ao aplicar o comando "d-none d-md-block" a aparição do texto abaixo
+    		    só será exibido(em modo de block) quando o display(d) for maior que o padrão de dimensinamento "md". Se não for, o display(d) será desativado(none) -->
+    				<h3>Poltronas confortáveis</h3>
+    				<p class="lead">Nossas poltronas são constantementes ajustadas de modo a proporcionar um maior conforto aos nossos clientes</p> <!-- A classe "lead" aumenta a letra do parágrafo  -->
+    			</div>
+                <!-- Texto finalizado -->
+
+    		</div>
+    		<div class="carousel-item active">
+    			<img src="images/pessoas no cinema index.jpg" class="d-block">
+
+    			<!-- Inserindo um cation/texto dentro do carousel: -->
+    			<div class="carousel-caption d-none d-sm-block text-white">
+    				<h3>Tela gigante full HD</h3>
+    				<p class="lead">Todas as salas apresentam telas com brilho e contraste deliberadamente definidos</p>
+    			</div>
+                <!-- tag finalizada -->
+    		</div>
+    		<div class="carousel-item">
+    			<img src="images/movie time 1 index.jpg" class="d-block"> 
+
+    			<!-- Inserindo um cation/texto dentro do carousel: -->
+    			<div class="carousel-caption d-none d-sm-block text-white">
+    				<h3>Venha e aproveite o nosso serviço!</h3>
+    				<p class="lead">Você será recebido com grande carinho. Contamos com você!</p>
+    			</div>
+                <!-- tag finalizada -->
+    		</div>
+    	</div>
+  
+
+   <!-- Adicionando controladores laterais dos slides -->
+    <a class="carousel-control-prev" href="#carouselSite" role="button" data-slide="prev">
+    	<span class="carousel-control-prev-icon"></span>
+    	<span class="sr-only">Anterior</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselSite" role="button" data-slide="next">
+    	<span class="carousel-control-next-icon"></span>
+    	<span class="sr-only">Avançar</span>
+    </a>
+    <!-- finalizando a adição dos controladores a partir daqui -->
+  </div>
+ </div>
+
+   <div class="container">
+  	 <div class="row">
+  	 	<div class="col-12 text-center my-5"><!-- no maior tamanho de tela essa div ocuparia 12 colunas-->
+  	 		<h1 class="display-3 text-white"><i class="fa fa-hand-spock-o" aria-hidden="true"></i> Seja bem-vindo ao Geek Cine!</h1>
+  	 		<p class="text-white">Confira aqui os filmes mais famosos e maneiros da cultura Geek!</p>
+  	 		<!--a classe "display" aplicada num texto irá definir o seu tamanho. No bootstrap 4 esse tamanho vai de 1 à 5, podendo ser configurado o valor de cada um dos números que compõem esse intervalo nos arquivos scss do bootstrap. | a classe "fa fa-cogs" não pertence ao bootstrap e sim ao font-awesome, o qual importará um ícone de engrenagem para o nosso site-->
+  	 	</div>
+  	 </div>
+      <!------------------------------------>
+     
+     <!--Menu navbar vertical lateral esquerdo -->
+       <div class="row mb-5">
+       	  <div class="col-xs-3 col-sm-7 col-md-4 nav-custom"><!--Estava como col-3 -->
+       	  	<nav id="navbarVertical" class="navbar navbar-light mt-5">
+       	  	  <nav class="nav nav-pills flex-column">
+       	  	  	 <a class="nav-link text-white" href="#item1">Guia 1</a>
+                 <nav>
+                 	<a class="nav-link ml-3 text-white" href="#item1-1">Guia 1.1</a>
+                 	<a class="nav-link ml-3 text-white" href="#item1-2">Guia 1.2</a>
+                 </nav>
+
+                  <a class="nav-link text-white" href="#item2">Guia 2 sem subtitulo</a>
+
+                  <a class="nav-link text-white" href="#item3">Guia 3</a>
+                 <nav>
+                 	<a class="nav-link ml-3 text-white" href="#item3-1">Guia 3.1</a>
+                 	<a class="nav-link ml-3 text-white" href="#item3-2">Guia 3.2</a>
+                 	<a class="nav-link ml-3 text-white" href="#item3-3">Guia 3.3</a>
+                 </nav>
+       	  	  </nav>
+       	  	</nav>
+       	  </div>
+     <!------------------------------------------>
+
+     <!--Inserindo o texto correspondente ao navbar do lado esquerdo. Nele será aplicado o scrollspy: -->
+       <div class="col-xs-3 col-sm-8 col-lg-10  offset-3 caixa-teste"><!--Para netbooks, desktop e notbook a col terá tamanho 8 | para tablets (sm) o col valerá 6-->
+       	  <div data-spy="scroll" data-target="#navbarVertical" data-offset="0" class="scrollspySite scrollspy-custom text-white  scrollspy-text-custom ">  <!-- "offset" é uma classe que define o nivel de distanciamento desse elemento à esquerda da tela | a "col" define a largura dele | "mb" define o margin-bottom -->
+       	  	  <h4 id="item1">Lorem Ipsum 1</h4>
+       	  	  <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+
+       	  	  <h4 id="item1-1">Lorem Ipsum 1.1</h5>
+       	  	  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+
+       	  	  <h4 id="item1-2">Lorem Ipsum 1.2</h5>
+       	  	  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+
+       	  	  <h4 id="item2">Lorem Ipsum 2</h4>
+       	  	  <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+
+              <h4 id="item3">Lorem Ipsum 3</h5>
+       	  	  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+
+       	  	  <h4 id="item3-1">Lorem Ipsum 3.1</h5>
+       	  	  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+
+       	  	  <h4 id="item3-2">Lorem Ipsum 3.2</h5>
+       	  	  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+       	      
+       	      <h4 id="item3-3">Lorem Ipsum 3.3</h5>
+       	  	  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+       	  </div>
+       </div>
+     <!----------------------------------------------------------------->
+      </div><!-- tag de finalização do row que engloba o navbar e o texto com scrollspy -->     
+
+
+
+
+     <!---- INTRODUZINDO 3 CARDS NO SITE: -->
+     <!-- cada card terá uma largura de 4 colunas | OBS: 1 coluna tem mais ou menos 50px de largura! -->
+     
+     <!--aplicando uma lista para deixar os cards enfileirados horizontalmente -->
+	   <div class="row mt-5 justify-content-sm-center"> <!--"my" altera a distância do elemento à parte superior como também à inferior | "justify-content-sm-center" centraliza todo o contéudo da linha(row) quando a janela do site for aberta em um tablet(sm)-->
+	      	  <div class="col-sm-6 col-md-4 mb-5"> 
+                 <div class="card bg-dark box-shadow-custom">
+
+	      	  	 <img class="card-img-top" src="images/narutos.jpg">
+	      	  	 <div class="card-body">
+	      	  	 	<h4 class="card-title text-white">Naruto - Road to Ninja</h4>
+	      	  	 	<h6 class="card-subtitle mb-2 text-muted text-center">Gênero: filme</h6> <!-- a classe "text-muted" deixa o texto cinza-claro -->
+	      	  	 	<p class="card-text text-muted">O filme conta a convivência de Naruto e Sakura com pessoas num mundo de outra dimensão, onde todas as pessoas apresentam personalidades be, diferentes das suas originais no mundo real.</p>
+	      	  	 </div>
+	      	  	 <ul class="list-group list-group-flush">
+	      	  	 	<li class="list-group-item">Clique aqui para ver o trailer do filme</li>
+	      	  	 	<li class="list-group-item">Clique aqui para ver o filme completo</li>
+	      	  	 	<li class="list-group-item">Clique aqui para mais informações sobre o filme </li>
+	      	  	 </ul>
+	      	  	 <div class="card-body">
+	      	  	 	<a href="#" class="card-link" data-toggle="modal" data-target="#modalColumns">Conheça a equipe produtora</a>
+	                <a href="#" class="card-link">Saiba mais</a>
+	      	  	 </div>
+	      	  	 <div class="card-footer text-muted"><!--Inserindo a secção de rodapé-->
+	      	  	 	Outros filmes do anime Naruto
+	      	  	 </div>
+
+	      	  	</div>
+	      	  </div>
+      
+	      	  <div class="col-sm-6 col-md-4 mb-5"> 
+                <div class="card bg-dark box-shadow-custom">
+
+		      	  	<img class="card-img-top" src="images/doctor strange poster 2.jpg">
+		      	  	<div class="card-body">
+		      	  	 	<h4 class="card-title text-white">Doutor Estranho</h4>
+		      	  	 	<h6 class="card-subtitle mb-2 text-muted text-center">Gênero: filme</h6> <!-- a classe "text-muted" deixa o texto cinza-claro -->
+		      	  	 	<p class="card-text text-muted">Strange é um doutor que sofre um acidente muito grave, ficando ele parapléblico. Sua únca chance de restaurar os seus movimentos é a utilização de magia.</p>
+		      	  	</div>
+		      	  	 <ul class="list-group list-group-flush">
+		      	  	 	<li class="list-group-item">Clique aqui para ver o trailer do filme</li>
+		      	  	 	<li class="list-group-item">Clique aqui para ver o filme completo e gratuito</li>
+		      	  	 	<li class="list-group-item">Mais informações sobre o filme...</li>
+		      	  	 </ul>
+		      	   	 <div class="card-body">
+		      	  	 	<a href="#" class="card-link" data-toggle="modal" data-target="#modalGrande">Elenco</a>
+		                <a href="#" class="card-link">Saiba mais</a>
+		      	  	 </div>
+		      	  	 <div class="card-footer text-muted"><!--Insrindo a secção de rodapé-->
+		      	  	 	Testando rodapé
+		      	  	 </div>
+	      	     </div>
+	      	  </div>
+
+              <!-- a classe "row" aplica um espaçamento à esquerda do elemento, assim como também à direita. -->
+	      	  <div class="col-sm-6 col-md-4 mb-5"><!-- a classe "col-sm-N" estabelece uma largura-limite para o texto ou qualquer outro elemento. A largura-limite é estabelecida a partir de números (N) dentro do intervalo de 1-12, quanto maior o número, maior essa largura-limite. --> 
+                 <div class="card bg-dark box-shadow-custom">
+	      	  	 <!-- Exemplo de como se criaria um cabeçalho: div class="card-header text-muted">exemplo de cabeçalho</div>-->
+	      	  	 <img class="card-img-top" src="images/iron man 3 poster.jpg">
+	      	  	 <div class="card-body">
+	      	  	 	<h4 class="card-title text-white">Homem de Ferro 3</h4>
+	      	  	 	<h6 class="card-subtitle mb-2 text-muted text-center">3° filme da trilogia</h6> <!-- a classe "text-muted" deixa o texto cinza-claro e pouco destacável-->
+	      	  	 	<p class="card-text text-muted">Tony Stark passa à enfrentar uma nova ameaça surgida no oriente médio. São terroristas que, dentre eles, se encontram pessoas com super força e uma resistência corporal 
+	      	  	 	nunca vista.</p>
+	      	  	 </div>
+		      	  	 <ul class="list-group list-group-flush">
+		      	  	 	<li class="list-group-item">Clique aqui para ver o trailer do filme</li>
+		      	  	 	<li class="list-group-item">Clique aqui para ver o filme completo</li>
+		      	  	 	<li class="list-group-item">Conheça o "making of" do filme</li>
+		      	  	 </ul>
+	      	  	 <div class="card-body">
+	      	  	 	<a href="#" class="card-link" data-toggle="modal" data-target="#modalPequeno">Indicações</a>
+	                <!-- a tag "a" acima irá chamar uma caixa de notificação para exemplo de um aviso ao usuário |
+	                	o comando "data-toggle" abre a janela modal | "data-target" aponta para a div-pai que está
+	                	responsável pelo conteúdo do modal. -->
+	                <a href="#" class="card-link">Elenco</a>
+	      	  	 </div>
+	      	  	 <div class="card-footer text-muted"><!--Inserindo a secção de rodapé-->
+	      	  	 	Saiba mais
+	      	  	 </div>
+	      	  </div>
+	      </div>
+     <!------------------------------------------------------------------------------------------------------------------>
+    </div><!-- tag de finalização da div da classe "row"-->
+   </div><!-- tag de finalização da classe "conntainer" que engloba o navbar vertical esquerdo, o texto com scrollspy e os cards --> 
+
+
+    <!-- CRIANDO UM RODAPÉ COM O JUMBOTRON E ALGUNS BOTÕES COM O NAV PILLS -->
+    <div class="jumbotron jumbotron-fluid background-gray-custom">
+    	<div class="container">
+    		<div class="row mb-5">
+    			<div class="col-12 text-center text-white">
+    				<h1 class="display-4"><i class="fa fa-video-camera text-primary" aria-hidden="true"></i> Veja os trailers dos filmes do momento!</h1>
+    				<p class="lead">O primeiro filme em alta e que conta com um número imenso de fãs é o Pantera Negra (2018).
+    				<Br/> O segundo mais aguardado é Vingadores: Ultimato. O terceiro: Toy Story 4.</p>
+    			</div>
+    		</div>
+
+    		<div class="row">
+    			<div class="col-12"><!--a classe "justify-content-center" centraliza todo o contéudo da linha (row)-->
+    				<ul class="nav nav-pills justify-content-center mb-4 ml-3" id="pills-nav" role="tablist">
+	    			    <li class="nav-item">
+	    		     		<a class="nav-link text-white active" id="nav-pills-01" data-toggle="pill" href="#nav-item-01">Pantera Negra</a>
+	    				</li>
+
+    					<li class="nav-item">
+    						<a class="nav-link text-white" id="nav-pills-02" data-toggle="pill" href="#nav-item-02">Vingadores: Ultimato</a>
+    					</li>
+
+    					<li class="nav-item">
+    						<a class="nav-link text-white" id="nav-pills-03" data-toggle="pill" href="#nav-item-03">Toy Story 4</a>
+    					</li>
+    				</ul>
+                     
+                    <!-- a classe "tab-content" será a encarregada de exibir o texto/conteudo numa área à parte 
+                    dependendo do botão (dentre o três) do tipo nav-item -->
+    				<div class="tab-content" id="nav-pills-content">
+    					<!-- a classe "tab-pane" será a área à parte onde será exibido o conteúdo | a "fade" faz uma transição bem legal na mudança dos textos -->
+    					<div class="tab-pane fade show active" id="nav-item-01" role="tabpanel">
+                           <div class="row">
+
+                                 <!------------------------INSERINDO A CLASSE EMBED NO NOSSO SITE----------------------->
+	    						 <div class="col-sm-6">
+	    						 	 <div class="embed-responsive embed-responsive-16by9"><!--Dimensões possíveis: 4:3, 16:9, 21:9, 1:1 -->
+	    						 	 	<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/KszSDnO3GGk"></iframe><!--Colocando o link do video do youtube em "src"-->
+	    						 	 </div>
+	    						 </div>
+                                 <!--a classe "embed" favorece uma configuração adequada da incorporação dos vídeos do YouTube no site com bootstrap -->
+
+	    						 <div class="col-sm-6">
+	    						 	 <p class="text-white">Em Pantera Negra, após a morte do rei T'Chaka (John Kani), o príncipe T'Challa (Chadwick Boseman) retorna a Wakanda para a cerimônia de coroação. Nela são reunidas as cinco tribos que compõem o reino, sendo que uma delas, os Jabari, não apoia o atual governo. T'Challa logo recebe o apoio de Okoye (Danai Gurira), a chefe da guarda de Wakanda, da irmã Shuri (Letitia Wright), que coordena a área tecnológica do reino, e também de Nakia (Lupita Nyong'o), a grande paixão do atual Pantera Negra, que não quer se tornar rainha. Juntos, eles estão à procura de Ulysses Klaue (Andy Serkis), que roubou de Wakanda um punhado de vibranium, alguns anos atrás.</p>
+	    						 </div>
+    						</div>
+    					</div>
+                        
+                        <!-- para que o conteúdo seja exibido primeiro que nas outras tab-panels deve-se implementar
+                        	as classes "show" e "active"-->
+    					<div class="tab-pane fade" id="nav-item-02" role="tabpanel">
+    					    <div class="row">
+    						     <div class="col-sm-6">
+	    						 	 <div class="embed-responsive embed-responsive-16by9"><!--Dimensões possíveis: 4:3, 16:9, 21:9, 1:1 -->
+	    						 	 	<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/g6ng8iy-l0U"></iframe>
+	    						 	 </div>
+	    						 </div>
+                                 <!--a classe "embed" favorece uma configuração adequada da incorporação dos vídeos do YouTube no site com bootstrap -->
+
+	    						 <div class="col-sm-6">
+	    						 	 <p class="text-white">Em Vingadores: Ultimato, após Thanos eliminar metade das criaturas vivas em Vingadores: Guerra Infinita, os heróis precisam lidar com a dor da perda de amigos e seus entes queridos. Com Tony Stark (Robert Downey Jr.) vagando perdido no espaço sem água nem comida, o Capitão América/Steve Rogers (Chris Evans) e a Viúva Negra/Natasha Romanov (Scarlett Johansson) precisam liderar a resistência contra o titã louco.</p>
+	    						 </div>
+	    				    </div>
+    					</div>
+
+    					<div class="tab-pane fade" id="nav-item-03" role="tabpanel">
+    						<div class="row">
+    						     <div class="col-sm-6">
+	    						 	 <div class="embed-responsive embed-responsive-16by9"><!--Dimensões possíveis: 4:3, 16:9, 21:9, 1:1 -->
+	    						 	 	<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/76CslX-q5C4"></iframe>
+	    						 	 </div>
+	    						 </div>
+                                 <!--a classe "embed" favorece uma configuração adequada da incorporação dos vídeos do YouTube no site com bootstrap -->
+
+	    						 <div class="col-sm-6">
+	    						 	 <p class="text-white">Toy Story 4 é um filme de animação de aventura e comédia estadunidense de 2019, dirigido por Josh Cooley e escrito por Stephany Folsom e Andrew Stanton, este último tendo co-escrito o roteiro dos três primeiros filmes da série, baseado em uma historia concebida também pelos três ao lado de John Lasseter, que dirigiu os dois primeiros títulos, sendo a sequência de Toy Story 3 e o quarto e último filme da franquia Toy Story. Produzido pela Walt Disney Pictures e Pixar Animation Studios e distribuído pela Walt Disney Studios Motion Pictures, a produção conta com as vozes de Tom Hanks, Tim Allen, Annie Potts, Joan Cusack, Wallace Shawn, John Ratzenberger, Don Rickles, Estelle Harris, Jodi Benson, Michael Keaton, Kristen Schaal, Blake Clark, Jeff Pidgeon, Timothy Dalton, Bonnie Hunt, Lori Alan e Laurie Metcalf, que reprisam seus papeis dos filmes anteriores da franquia, enquanto Tony Hale, Keegan-Michael Key, Jordan Peele, Keanu Reeves e Madeleine McGraw fazem suas estreias na franquia.</p>
+	    						 </div>
+	    					</div>
+    					</div>
+    				</div>
+
+    			</div>
+    		</div>
+    	</div>
+    </div>
+    <!---------------------Fechando o Jumbotron e Nav Pills----------------------------------------------------------------->
+
+
+     <!--UTILIZANDO O MODAL PARA FAZER UMA CAIXA DE NOTIFICAÇÃO -->
+     <div class="modal fade" id="modalPequeno" tabindex="-1" role="dialog"><!--o comando tabIndex serve para gerar uma ordem na tabulação do conteúdo -->
+     	 <div class="modal-dialog" role="document"><!--O comando role="<nomeDaClasse" melhora a acebilidade para pessoas que usam leitores de tela -->
+     	 	<div class="modal-content">
+                <div class="modal-header">
+	                <h5 class="modal-title">Titulo do Modal</h5>
+	                <button type="button" class="close" data-dismiss="modal"><!-- Esse atributo "data-dismiss" é responsável por fechar a janela pop-up modal se você clicar no button interno do cabeçalho-->
+	                	<span>&times;</span>
+	                	<!--"&times;" é uma comando-chave para estilizar a letra X utilizada como símbolo
+	                	para fechar janelas.  -->
+	                </button>
+                </div>
+                <div class="modal-body">
+                	Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more.
+                </div>
+                <div class="modal-footer">
+                	<button type="button" class="btn btn-danger" data-dismiss="modal">Okay</button>
+                </div>
+     	 	</div>
+     	 </div>
+     </div>
+     <!-------------------------------------------------------------------------------------------->
+     <div class="modal fade" id="modalColumns" tabindex="-1" role="dialog">
+     	 <div class="modal-dialog" role="document">
+     	 	<div class="modal-content">
+                <div class="modal-header">
+	                <h5 class="modal-title">Modal com colunas</h5>
+	                <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                </div>
+                <div class="modal-body">
+                	<div class="container fluid">
+                		<div class="row">
+                			 <div class="col 6">
+                			 	<h5>Donec Semper</h5>
+                			 	<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more.</p>
+                			 </div>
+
+                             <div class="col 6">
+                			 	<h5>Semper Donec</h5>
+                			 	<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more.</p>
+                			 </div>                			 
+                		</div>
+                	</div>
+                </div>
+                <div class="modal-footer">
+                	<button type="button" class="btn btn-danger" data-dismiss="modal">Okay</button>
+                </div>
+     	 	</div>
+     	 </div>
+     </div>
+     <!--------------->
+     <div class="modal fade" id="modalGrande" tabindex="-1" role="dialog">
+     	 <div class="modal-dialog" role="document">
+     	 	<div class="modal-content">
+                <div class="modal-header">
+	                <h5 class="modal-title">Titulo do Modal</h5>
+	                <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                </div>
+                <div class="modal-body">
+                	The standard Lorem Ipsum passage, used since the 1500s
+					"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+
+					Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC
+					"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+
+					1914 translation by H. Rackham
+					"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"
+                </div>
+                <div class="modal-footer">
+                	<button type="button" class="btn btn-danger" data-dismiss="modal">Okay</button>
+                </div>
+     	 	</div>
+     	 </div>
+     </div>
+<!--------------------------------------------------------------------------------------------------------------------------->
+
+
+
+
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+  </body>
+</html>

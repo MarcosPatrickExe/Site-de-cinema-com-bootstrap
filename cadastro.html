@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/compilados/bootstrap.css">
+    <link rel="stylesheet" href="style/index-style-css/style_index.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.css">
+
+    <title>Geek Cine - Cadastro</title>
+  </head>
+  <body>
+  	  <nav class="navbar navbar-expand-lg navbar-dark bg-gradient-primary"> 
+        <div class="container">
+        	<a class="navbar-brand h1 mb-1" href="#"><i class="fa fa-film" aria-hidden="true"></i> Geek Cine</a>
+
+        	<button class="navbar-toggler" data-toggle="collapse" data-target="#navbarSite">
+        		<span class="navbar-toggler-icon"></span>
+        	</button>
+
+        	<div class="collapse navbar-collapse" id="navbarSite">
+        		<ul class="navbar-nav h5 mr-auto">
+        			<li class="nav-item">
+        				<a class="nav-link" href="index_site.html">Inicio</a>
+        			</li>
+        			<li class="nav-item">
+        				<a class="nav-link" href="#">Perfil</a>
+        			</li>
+        			<li class="nav-item">
+        				<a class="nav-link" href="#">Serviços</a>
+        			</li>
+        			<li class="nav-item">
+        				<a class="nav-link" href="#">Cadastro</a>
+        			</li>
+        			<li class="nav-item">
+        				<a class="nav-link" href="#">Contatos</a>
+        			</li>
+        		</ul>
+
+        		<ul class="navbar-nav ml-auto">
+        		    <li class="nav-item dropdown">
+        		      <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="navDrop">Redes Sociais</a>
+
+    		    	  <div class="dropdown-menu">
+    		    		<a class="dropdown-item">Facebook</a>
+    		    		<a class="dropdown-item">Twitter</a>
+    		    		<a class="dropdown-item">Instagram</a>
+    		    	  </div>
+        		    </li>
+        		</ul>
+        	
+                <form class="form-inline">
+                	<input class="form-control ml-4 mr-2" type="search" placeholder="Buscar...">
+                	<button class="btn btn-dark mt-xs-2" type="submit">Ok</button><!-- criando o botão de busca -->
+                </form>
+        	</div>
+        </div>
+    </nav>
+
+
+     <!--ADICIONANDO UM FORMULÁRIO NO BOOTSTRAP 4:-->
+     <div class="container">
+     	<div class="row">
+     		<div class="col-12 text-center my-5">
+     		<h1 class="display-4 text-white"><i class="fa fa-paper-plane text-primary " aria-hidden="true">
+     		</i> Cadastre-se no nosso site e acompanhe as principais notícias de lançamentos de trailers e filmes!</h1>
+     		</div> <!--Pague o seu ingresso agora mesmo e já adiante a sua vaga em uma de nossas salas!-->
+     	</div>
+
+     	<div class="row mb-5 justify-content-center text-white">
+     		<div class="col-sm-12 col-md-10 col-lg-8">
+     			<form>
+     				<div class="form-row">
+     					<div class="form-group col-sm-6"><!--a classe "form-group" foi habilitada pois serão criados dois elementos: um label e um input-->
+     						<label for="inputName">Seu nome:</label><!--o atributo "for" indica que o label deve ficar acima de um input específico, no caso o "inputName"-->
+                            <input type="text" class="form-control" id="inputName" placeholder="Nome">
+     					</div>
+     					
+                        <div class="form-group col-sm-6">
+                        	<label for="inputSobrenome">Seu sobrenome:</label>
+                        	<input type="text" class="form-control" id="inputSobrenome" placeholder="Sobrenome">
+                        </div>
+     				</div>
+
+     				<div class="form-row"><!--Deixando o campo endereço/caixa de texto ocupando toda a linha--->
+     					<div class="form-group col-sm-12">
+     						<label for="inputEnd">Seu endereço:</label>
+                            <input type="text" class="form-control" id="inputEnd" placeholder="Endereço">
+     					</div>
+                    </div>
+
+     				<div class="form-row">
+                        <div class="form-group col-sm-4">
+                        	<label for="inputCid">Sua cidade:</label>
+                        	<input type="text" class="form-control" id="inputCid" placeholder="Cidade">
+                        </div>
+     			
+     					<div class="form-group col-sm-4">
+     						<label for="inputEstado">Seu estado:</label>
+                            <select id="inputEstado" class="form-control">
+                            	<option selected>Escolha</option>
+                            	<option>CE</option>
+                            	<option>SP</option>
+                            	<option>MA</option>
+                            </select>
+     					</div>
+     					
+                        <div class="form-group col-sm-4">
+                        	<label for="inputCep">Seu CEP:</label>
+                        	<input type="text" class="form-control" id="inputCep" placeholder="Seu CEP">
+                        </div>
+     				</div>
+
+                    <!--Inserindo um checkbox--->
+     				<div class="form-row">
+     					<div class="form-group col-sm-12">
+     						<div class="form-check">
+     							<label class="form-check-label">
+     							<input type="checkbox" class="form-check-input">Desejo receber mensagens por E-mail</label>
+     						</div>
+     					</div>
+     				</div>
+                     
+                    <!--Inserindo o botão de enviar--->
+                    <div class="form-row">
+                    	<div class="col-sm-12">
+                    		<button type="submit" class="btn btn-primary">Enviar</button>
+
+                            <!--Em data-place você pode escolher qual a posição que o popover vai aparecer | possíveis valores: right, left, center, top, bottom-->
+                    		<a tabindex="0" class="btn btn-secondary ml-2" role="button" data-toggle="popover"
+                    		data-place="top" data-trigger="focus" title="Titulo para o nosso popover" 
+                    		data-content="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.">Ajuda</a>
+                    		<!--A opção "focus" para o atributo data-trigger indica que deseja-se pôr um efeito
+                    	    de foco sobre o elemento caso o mouse esteja sobre ele. Se não estiver o popover, o qual parece muito com uma mensagem pop-up, não será exibido. -->
+                    	</div>
+                    </div>
+     			</form>
+     		</div>
+     	</div>
+     </div><!--Fechando a tag da div "container" do FORMULÁRIO-->
+
+
+     <!----------------------------CRIANDO RODAPÉ---------------------------------------->
+    <div class="container rodape-custom">
+     <div class="row justify-content-center">
+     	<div class="col-12 mb-5"><hr/></div><!--foi utilizado um <hr/> para inserir uma reta horizontal e assim separar os contepúdos. -->
+
+     	<div class="col-sm-4 col-lg-3 list-gruop-custom">
+     		<h3 class="text-white text-shadow-custom">Curso</h3>
+     		<p class="colorGrayMedium-custom">at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source</p>
+     	</div>
+        
+        <!-------------------- UTILIZANDO O LIST GROUP---------------------------------->
+     	<div class="col-sm-4 col-lg-3 list-gruop-custom">
+     		<h3 class="text-white text-shadow-custom">Filmes em alta recentemente</h3>
+     		<div class="list-group text-center">
+     			<a href="#" class="list-group-item  list-group-item-action  active">Submenu item 2.0</a>
+     			<a href="#" class="list-group-item  list-group-item-action  list-group-item-primary">Submenu item 2.1</a>
+     			<a href="#" class="list-group-item  list-group-item-action  list-group-item-primary">Submenu item 2.2</a>
+     			<a href="#" class="list-group-item  list-group-item-action  list-group-item-primary">Submenu item 2.3</a>
+     			<a href="#" class="list-group-item  list-group-item-action  disabled">Submenu item 2.4</a>
+     			<!-- a classe "active" deixa uma opção já marcada | já a classe "disabled" desabilita um item e impossibita a sua utilização. -->
+     		</div>
+     	</div><!----------------Fechando o LIST GROUP----------------------------------->
+        
+
+
+        <!------------------ UTILIZANDO O BUTTON GROUP----------------------------------->
+     	<div class="col-sm-4 col-lg-3 list-gruop-custom">
+     		<h3 class="text-white text-shadow-custom text-center mt-3">Visite nossas redes sociais!</h3>
+     		<div class="btn-group-vertical btn-block btn-group-lg" role="group"><!--Ao utilizar a classe "btn-group" os seus subelementos serão distribuídos horizontalmente, por padrão. Para mudar isso basta colocar a classe "vertical" | a classe "btn-block" faz com que os elementos ocupem todo o espaço horizontal da col | a classe "btn-group-lg" faz com que cada elemento tenha a mesma largura da "row" anterior. -->
+     			<a class="btn btn-outline-primary" href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i> Facebook</a>
+     			<a class="btn btn-outline-info" href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i> Twitter</a>
+     			<a class="btn btn-outline-magenta-custom" href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Instagram</a>
+     			<!--A classe "outline" deixa os elementos coloridos somente na área outline, ou seja, nas bordas. 
+     			E eles só serão pintados quando receberem o foco do mouse. -->
+     		</div>
+     	</div><!-------------Fechando o BUTTON GROUP-------------------------------------->
+
+        <!--------------------UTILIZANDO O BLOCKQUOTE------------------------------------->
+        <div class="col-12 mt-5 text-secondary">
+        	<blockquote class="blockquote text-center">
+        		<p class="mb-0">O sucesso não é garantido, mas o fracasso é certo se você não estiver emocionalmente envolvido em seu trabalho.</p>
+        		<footer class="blockquote-footer">Biz Stone, <cite title="Source Title">fundador do Twitter</cite></footer>
+        	</blockquote><!--O blockquote é uma tag HTML e uma classe de bootstrap que escreve o texto do usuário bem abaixo dos demais elementos | a tag "footer" ou a classe "blockquote-footer" escreve um texto no documento com um tom de cor cinza, assim como também ocorre nos textos inseridos na tag "cite", porém são transformados em itálico. -->
+        </div>
+        <!--------------------FECHANDO O BLOCKQUOTE------------------------------------->
+   </div><!----------------------------FECHANDO RODAPÉ---------------------------------------->
+  </div> <!------------------FECHANDO A DIV DO TIPO CONTAINER---------------------------->
+
+   <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+   <script src="node_modules/jquery/dist/jquery.js"></script>
+   <script src="node_modules/popper.js/dist/umd/popper.js"></script>
+   <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+
+   <!--Inserindo um script para que o componente popover possa funcionar, sendo disparado quando o botão "ajuda" for clicado.-->
+   <script>
+   	 $(function (){ $('[data-toggle="popover"]').popover(); });
+   </script>
+  </body>
+</html>

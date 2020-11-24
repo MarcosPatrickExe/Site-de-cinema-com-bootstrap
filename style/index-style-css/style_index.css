@@ -1,0 +1,114 @@
+html, body {
+    overflow-x: hidden;
+    background-color: #333333; }   /*#212A6B;*/
+
+hr{ border: 1px solid black; width: 100%; }
+
+.scrollspySite{ height: 400px; overflow: auto; position: relative; } 
+
+.colorGrayMedium-custom{ color: #CBD1CB;}
+
+.background-gray-custom {background-color: #666666;}
+
+.text-shadow-custom{ text-shadow: 3px 3px 6px #000000, -1px -1px 6px #000000; }
+
+.scrollspy-custom{ position: relative; margin-top: -340px; margin-left: 10px; background-color: black; 
+                   width: 800px; height: 500px; margin-bottom: 50px; border-radius: 10px;
+                   padding-right: 10px; padding-top: 20px; width: auto;}
+
+.scrollspy-custom::-webkit-scrollbar{ width: 7px;/*<=largura da barra*/ background-color: #474747; } /*cinza escuro*/
+/*.scrollspy-custom::-webkit-scrollbar-arrow {color: red;}*//*cor da barra, e não das setas...*/
+/*.scrollspy-custom::-webkit-scrollbar-3dlight{ color: black;} */
+/*.scrollspy-custom::-webkit-scrollbar-highlight{ color: gray; }  */
+/*.scrollspy-custom::-webkit-scrollbar-face{ color: orange; } */
+/*.scrollspy-custom::-webkit-scrollbar-shadow{ color: black; } */
+/*.scrollspy-custom::-webkit-scrollbar-darkshadow{ color: black; }*/
+/*.scrollspy-custom::-webkit-scrollbar-track{ background: rgba(255,0,0,0.1); }*//*cor de fundo da área que a barra pode rolar*/
+.scrollspy-custom::-webkit-scrollbar-thumb{ border-radius: 20px; background: blue; }
+
+   /*scrollbar-face-color: #367CD2;
+   scrollbar-shadow-color: #FFFFFF;
+   scrollbar-highlight-color: #FFFFFF;
+   scrollbar-3dlight-color: #FFFFFF;
+   scrollbar-darkshadow-color: #FFFFFF;
+   scrollbar-track-color: #FFFFFF;
+   scrollbar-arrow-color: #FFFFFF;*/
+
+h4{
+	text-align: center;
+	padding-top: 30px;
+}
+.scrollspy-text-custom {
+	text-align: justify;
+	font-size: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.container-person{ 
+  width: 100%;
+  height: auto;
+}
+
+.btn-outline-magenta-custom{
+	color: magenta;
+	border-color: magenta;
+    background-color: transparent;
+}
+.btn-outline-magenta-custom:hover{
+	color: white;
+	outline: magenta;
+    background-color: magenta;
+}
+
+
+/*a seta para a direita no comando abaixo indica que é para aplicar o atributo "margin-top" somente no filho direto 
+da div da classe "col-12" */
+div.jumbotron div.container div.row div.col-12 > h1{ margin-top: -20px; } /*OU: */
+/* div.jumbotron div.container div.row div.col-12 h1 
+   o comando acima pode também ser usado já que o h1 é o único elemento de tag <h1> dentro da div da classe "col-12" que está
+   dentro de outra div da classe "row" e assim por diante... */
+
+.nav-custom{
+  position: relative;
+  margin-right: 20px;
+}
+
+.caixa-teste{
+  position: relative;
+  margin-left: 210px;
+  margin-top: 10px;
+}
+
+.rodape-custom{
+  position: relative;
+  width: 90%;
+  margin-left: auto;
+}
+
+/* testando o box shadow */
+.box-shadow-custom{
+   box-shadow: -1px -1px 3px 2px black, 1px 1px 3px 2px black;
+
+  /*também podia usar:
+  -webkit-box-shadow: 9px 7px 5px rgba(50, 50, 50, 0.77);
+  -moz-box-shadow:    9px 7px 5px rgba(50, 50, 50, 0.77);*/
+         
+  /*  width: 1400px; /*estava como max-width: 100%; |1400px */
+}
+
+
+/* Instruções para estilização de todas as barras de rolagem: 
+::-webkit-scrollbar-track { /*track é a área em forma de reta que a barra pode ocupar
+    background-color: blue;
+}
+::-webkit-scrollbar {
+    width: 9px;
+    /*background: blue; 
+}
+::-webkit-scrollbar-thumb { /*thumb é a barra em si
+    background: white;
+} */
+
+/* .custom-list{ list-style: none; display: flex; margin-left: -150px; margin-top: 100px; }
+.custom-list li{ display: inline-block; padding-left: 80px; } */
