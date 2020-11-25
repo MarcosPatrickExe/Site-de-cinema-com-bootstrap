@@ -8,4 +8,8 @@
 </p>
 
 <h2 align="center">Preview do site: </h2>
-![preview do site](https://user-images.githubusercontent.com/61922327/100167837-c0d7a300-2e9e-11eb-8e54-e1bc97d49f82.jpg)
+![previw](https://user-images.githubusercontent.com/61922327/100168012-2deb3880-2e9f-11eb-9d45-6b3a6bca0b11.jpg)
+
+
+
+
